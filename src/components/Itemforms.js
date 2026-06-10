@@ -12,7 +12,7 @@ const Itemforms = () => {
     e.preventDefault()
     const item = { title, how: Number(how), size }
 
-    const response = await fetch('https://inventory-backend.vercel.app/api/items', {
+    const response = await fetch('https://inventory-backend-production-93bf.up.railway.app/api/items', {
       method: 'POST',
       body: JSON.stringify(item),
       headers: {
