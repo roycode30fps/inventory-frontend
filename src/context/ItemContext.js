@@ -10,7 +10,7 @@ export const ItemContextProvider = ({ children }) => {
 
   const fetchItems = async () => {
     try {
-      const res = await fetch('https://inventory-backend.vercel.app/api/items')
+      const res = await fetch('inventory-backend-production-93bf.up.railway.app/api/items')
       const json = await res.json()
       if (!res.ok) throw new Error(json.error || 'Failed to fetch')
       setItems(json)
