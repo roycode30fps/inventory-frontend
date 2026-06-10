@@ -4,7 +4,7 @@ const Details = ({ item }) => {
     const { fetchItems } = useItemContext()
 
     const handleClick = async () => {
-        const response = await fetch(`http://localhost:4000/api/items/${item._id}`, {
+        const response = await fetch(`https://inventory-backend-production-93bf.up.railway.app/api/items/${item._id}`, {
             method: 'DELETE'
         })
         await response.json()
