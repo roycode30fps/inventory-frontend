@@ -7,7 +7,7 @@ const Details = ({ item }) => {
         const response = await fetch(`http://localhost:4000/api/items/${item._id}`, {
             method: 'DELETE'
         })
-        const json = await response.json()
+        await response.json()
 
         if (response.ok) {
             fetchItems()
